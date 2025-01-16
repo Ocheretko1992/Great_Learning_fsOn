@@ -1,0 +1,35 @@
+.wraper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(171 145 145);
+}
+.modalWraper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: aqua;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: darkorange;
+}
+.buttonWraper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+.hr {
+  height: 3px;
+  background-color: black;
+  width: 100%;
+}
