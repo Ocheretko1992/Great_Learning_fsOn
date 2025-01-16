@@ -1,11 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem/TodoItem";
 import s from "./TodoList.module.css";
-import TodosData from "./Todos.json";
+// import TodosData from "./Todos.json";
 
 const TodoList = () => {
-  const [todos, setTodos] = useState(TodosData);
+  const [todos, setTodos] = useState(() => {
+    const saveData = JSON.parse(localStorage.getItem("todos"));
+    if (saveData?.length) {
+      return saveData;
+    }
+    return [];
+  });
   const [newValue, setNewValue] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const hendleDelete = (id) => {
     const newTodos = todos.filter((item) => item.id !== id);
@@ -22,6 +32,19 @@ const TodoList = () => {
     setTodos((prev) => [...prev, newObj]);
     setNewValue("");
   };
+
+  useEffect(() => {
+    const handleClickAdd = (e) => {
+      if (e.key === "Enter") {
+        handleAdd();
+      }
+    };
+    document.addEventListener("keydown", handleClickAdd);
+
+    return () => {
+      document.removeEventListener("keydown", handleClickAdd);
+    };
+  });
 
   return (
     <div className={s.wraper}>

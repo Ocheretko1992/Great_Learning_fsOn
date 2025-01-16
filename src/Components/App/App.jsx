@@ -3,7 +3,6 @@ import Cars from "../Cars/Cars";
 import Counter from "../Counter/Counter";
 import ColorPicker from "../ColorPicker/ColorPicker";
 import TodoList from "./../TodoList/TodoList";
-
 import { useState } from "react";
 import Modal from "../Modal/Modal";
 
@@ -31,6 +30,7 @@ const App = () => {
       {isOpen && (
         <Modal handleCloseModal={handleCloseModal}>Today is Thursday</Modal>
       )}
+
       {/*========= 2 ========= */}
 
       {/*========= 3 ========= */}
