@@ -1,0 +1,32 @@
+.wraper {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px 10px 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px silver;
+  background-color: aqua;
+}
+
+.task {
+  margin: auto;
+  font-size: 25px;
+  letter-spacing: 0.02em;
+}
+
+.buttonDelete {
+  background-color: yellow;
+  box-shadow: 1px 1px 1px 1px silver;
+  border-radius: 3px;
+  border: inherit;
+  padding: 5px;
+}
+.buttonDelete:hover {
+  background-color: white;
+}
+
+.checkBox {
+  width: 20px;
+  height: 20px;
+}

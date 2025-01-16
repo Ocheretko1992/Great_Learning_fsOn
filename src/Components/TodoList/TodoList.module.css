@@ -1,0 +1,44 @@
+.wraper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 0 15px 0;
+}
+
+.list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.input {
+  padding: 5px 10px;
+  box-shadow: 1px 1px 1px 1px silver;
+  border-radius: 4px;
+  border-color: aqua;
+  font-size: 20px;
+}
+
+.input:focus {
+  outline-color: aqua;
+  background-color: #fff;
+}
+
+.buttonAdd {
+  padding: 5px 5px;
+  background-color: yellow;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px silver;
+  border: none;
+}
+
+.buttonAdd:hover {
+  background-color: white;
+}
